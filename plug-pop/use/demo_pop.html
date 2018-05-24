@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			html,body{height:100%;width:100%;overflow: hidden;}
+			.mask{width:100%;height:100%;z-index:100;background: #666;opacity: 0.8;position:absolute;left:0;top:0;}
+		</style>
+	</head>
+	<body>
+		<div id="mask"></div>
+		<div class="good"></div>
+		<button class="btn">显示弹窗</button>
+	
+		<script src="../jquery-3.2.1.js"></script>
+		<script src="../plug-origin/door.js"></script>
+		<script>
+			$(function(){
+				$('.btn').click(function(){
+					
+					if($('.door').html()){
+						$('.door').show();
+						$('#mask').addClass('mask');
+					}else{
+						$().showPop({ele:'.good',option:'我是h2标签'});
+					}
+					
+				})
+				
+				
+					
+				
+			})
+			
+		</script>
+	</body>
+</html>
